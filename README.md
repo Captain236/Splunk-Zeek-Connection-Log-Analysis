@@ -41,27 +41,27 @@
 #🔍 Lab Tasks
  Used the following SPL queries to complete each task:
  
-##✅Task 1: Find the Top 10 Client IPs (id.orig_h)
+# ✅Task 1: Find the Top 10 Client IPs (id.orig_h)
 - **index=conn_lab sourcetype="json"
 | stats count by id.orig_h
 | sort -count
 | head 10**
 ![Add Data - Select Source _ Splunk 9 4 2 - Google Chrome 03-05-2025 11_35_47](https://github.com/user-attachments/assets/2f1dae79-3abb-46c1-a1af-38e5fe2eb841)
 
-##✅Task 2: List Most Common Services
+# ✅Task 2: List Most Common Services
 - **index=conn_lab sourcetype="json"
 | stats count by service
 | sort -count**
 ![Add Data - Select Source _ Splunk 9 4 2 - Google Chrome 03-05-2025 11_37_03](https://github.com/user-attachments/assets/ef04981e-b36b-43e5-8714-78053e20de89)
 
-## ✅Task 3: Find Connections with Duration > 1 Second
+# ✅Task 3: Find Connections with Duration > 1 Second
 - **index=conn_lab sourcetype="json"
 | stats count by "id.resp_h"
 | sort -count
 | head 10**
 ![Add Data - Select Source _ Splunk 9 4 2 - Google Chrome 03-05-2025 11_41_25](https://github.com/user-attachments/assets/888cccd0-0b92-4958-9108-6269e471c590)
 
-## ✅Task 4: Identify the Most Accessed Internal Servers
+# ✅Task 4: Identify the Most Accessed Internal Servers
 - **index=conn_lab sourcetype="json"
 | stats count by "id.resp_h"
 | sort -count
